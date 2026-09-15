@@ -1,0 +1,11 @@
+# The workbench
+PySide6>=6.5
+
+# Arabic shaping: logical text -> presentation forms in visual order
+arabic-reshaper>=3.0
+python-bidi>=0.4
+
+# The vendored Peace Walker format layer
+numpy>=1.24
+Pillow>=10.0
+lz4>=4.0
