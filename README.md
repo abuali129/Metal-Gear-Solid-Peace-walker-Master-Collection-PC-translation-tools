@@ -27,7 +27,7 @@ python pwtr.py
 ```
 
 ### Pre-request
-Remove Steam DRM from `METAL GEAR SOLID PEACE WALKER.exe` using **[steamless](https://github.com/atom0s/Steamless).
+Remove Steam DRM from `METAL GEAR SOLID PEACE WALKER.exe` using **[steamless](https://github.com/atom0s/Steamless).**
 
 On Windows, `pwtr311.bat` opens the workbench with CPython 3.11 from its
 default install location. `Recommended`
@@ -248,7 +248,7 @@ Team)** in the [Peace Walker Localization Tool](https://t.me/LittleBitUA), MIT
 licensed. That work is vendored in `pwtr/formats/` and is what makes any of
 this possible. See [CREDITS.md](CREDITS.md).
 
-[MGS PW Soldier Editor] (https://www.nexusmods.com/metalgearsolidpeacewalkermc/mods/11) by **CRYPTICALINSAN1TY** 
+**[MGS PW Soldier Editor](https://www.nexusmods.com/metalgearsolidpeacewalkermc/mods/11)**, by **CRYPTICALINSAN1TY** 
 
 This project ships **no game data**. Metal Gear Solid and Peace Walker are
 trademarks of Konami; this toolkit is independent and not endorsed by Konami.
