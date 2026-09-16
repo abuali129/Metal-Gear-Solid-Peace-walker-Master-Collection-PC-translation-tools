@@ -1,15 +1,9 @@
 # Peace Walker translation toolkit
 
 A fan-translation workbench for **Metal Gear Solid: Peace Walker** (PC,
-*Master Collection*). It reads every piece of English the game shows, gives
-you a table to translate it in, and writes it back into the game files —
-together with the font glyphs your language needs.
+*Master Collection*) For English text & Font modding & some hardcodded texts the game shows as pre-rendered video files.
 
-It works for any language. Right-to-left scripts that need shaping (Arabic)
-are handled on build; everything else — Cyrillic, Greek, accented Latin,
-and so on — is written as typed.
-
-* **`pwtr.py`** — the translation workbench.
+* **`pwtr311.bat** — the translation workbench.
 * **`pwtex_app.py`** — the texture workbench, for pictures with writing in them.
 
 Nothing touches the game until you choose **Install**, and every file it
@@ -32,15 +26,18 @@ pip install -r requirements.txt
 python pwtr.py
 ```
 
+### Pre-request
+Remove Steam DRM from `METAL GEAR SOLID PEACE WALKER.exe` using **[steamless](https://github.com/atom0s/Steamless).
+
 On Windows, `pwtr311.bat` opens the workbench with CPython 3.11 from its
-default install location.
+default install location. `Recommended`
 
 ### Python version
 
 The story container (`SLOT.DAT`) is made of zlib blocks that must not grow
-past their original footprint. Python 3.14 bundles zlib-ng, which
-compresses a few per cent looser than classic zlib — enough to push
-borderline blocks over. Build with 3.11, or install `zopfli`.
+past their original footprint. Python 3.11 gives a better compression results
+it is recommended to use it as a default.
+With 3.14 you would use `zopfli` which is untested.
 
 ---
 
@@ -76,16 +73,9 @@ translates every copy.
 
 ### Working in the table
 
-* **Untranslated only** and **Too long only** filter the list; **Next
+* **Untranslated only** and **Too long only** filter the list would filter only
+the line that needs to be shorten to fit in, other wise these would stay English; **Next
   untranslated** and **Next too long** (Ctrl+G) walk it.
-* Typing a block number (Story) into the filter lists every line in that block.
-* The editor warns when a translation drops engine markup. Keep these exactly
-  as they are in the English:
-  * `<I=...>` button icons and `<C=...>` colour changes
-  * `$1`, `%d`, `%s` — values the game fills in
-  * `[snake_case]` tokens
-* Line breaks matter. Keep leading blank lines in captions — they position the
-  text on screen — and use real line breaks, not a typed `\n`.
 
 ---
 
@@ -142,10 +132,11 @@ point it can reach, and the text is written in those code points on build.
 3. **Subtitle face** — a TrueType font that has your characters.
 4. Adjust **Size** and per-letter **Nudge** against the live preview — it is
    drawn by the same code that paints the face.
-5. **Spend** — which case range (capitals or lower case) gives up its
-   one-byte code points to your letters. Those Latin letters keep working in
-   your translations; only text never rebuilt through the plan (untranslated
-   lines, names read from saves) is affected.
+5. **Spend** `lower case recommended`
+   — which case range (capitals or lower case) gives up its one-byte code points
+   to your letters. Those Latin letters keep working in your translations; only
+   text never rebuilt through the plan (untranslated lines, names read from
+   saves) is affected.
 6. **Install into project output**, then rebuild the text.
 
 **Freeze mapping** keeps the installed code points and only repaints glyphs —
@@ -160,6 +151,8 @@ can hold** reports whether your translation of those strings fits.
 
 ## Bringing in an existing translation
 
+In case you use my tools to translate PS3 or PSP versions,
+you can import these translations in here.
 **File > Import translations from another build** reads a folder of CSV
 files and fills blank lines. Each CSV needs two columns:
 
@@ -254,6 +247,8 @@ fonts and the textures — were reverse engineered by **Dmytro Bidlov (Little Bi
 Team)** in the [Peace Walker Localization Tool](https://t.me/LittleBitUA), MIT
 licensed. That work is vendored in `pwtr/formats/` and is what makes any of
 this possible. See [CREDITS.md](CREDITS.md).
+
+[MGS PW Soldier Editor] (https://www.nexusmods.com/metalgearsolidpeacewalkermc/mods/11) by **CRYPTICALINSAN1TY** 
 
 This project ships **no game data**. Metal Gear Solid and Peace Walker are
 trademarks of Konami; this toolkit is independent and not endorsed by Konami.
