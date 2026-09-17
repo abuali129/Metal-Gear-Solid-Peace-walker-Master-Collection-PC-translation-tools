@@ -3,7 +3,7 @@
 A fan-translation workbench for **Metal Gear Solid: Peace Walker** (PC,
 *Master Collection*) For English text & Font modding & some hardcodded texts the game shows as pre-rendered video files.
 
-* **`pwtr311.bat** — the translation workbench.
+* **`pwtr311.bat`** — the translation workbench.
 * **`pwtex_app.py`** — the texture workbench, for pictures with writing in them.
 
 Nothing touches the game until you choose **Install**, and every file it
