@@ -248,7 +248,7 @@ Team)** in the [Peace Walker Localization Tool](https://t.me/LittleBitUA), MIT
 licensed. That work is vendored in `pwtr/formats/` and is what makes any of
 this possible. See [CREDITS.md](CREDITS.md).
 
-**[MGS PW Soldier Editor](https://www.nexusmods.com/metalgearsolidpeacewalkermc/mods/11)**, by **CRYPTICALINSAN1TY** 
+**[MGS PW Soldier Editor](https://www.nexusmods.com/metalgearsolidpeacewalkermc/mods/11)**, by **CRYPTICALINSAN1TY** makes the way possible to edit the staff names in the save data.
 
 This project ships **no game data**. Metal Gear Solid and Peace Walker are
 trademarks of Konami; this toolkit is independent and not endorsed by Konami.
